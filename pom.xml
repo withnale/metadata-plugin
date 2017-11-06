@@ -13,6 +13,21 @@
     <name>Metadata plugin</name>
     <url>http://wiki.jenkins-ci.org/display/JENKINS/Metadata+Plugin</url>
 
+    <repositories>
+        <repository>
+            <id>repo.jenkins-ci.org</id>
+            <url>https://repo.jenkins-ci.org/public/</url>
+        </repository>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>central</id>
+            <name>Central Repository</name>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+    </repositories>
+
     <licenses>
         <license>
             <name>MIT</name>
@@ -57,16 +72,6 @@
         <powermock.version>1.6.6</powermock.version>
     </properties>
 
-    <repositories>
-        <repository>
-            <id>repo.jenkins-ci.org</id>
-            <url>http://repo.jenkins-ci.org/public</url>
-        </repository>
-        <repository>
-            <id>powermock-repo</id>
-            <url>http://powermock.googlecode.com/svn/repo/</url>
-        </repository>
-    </repositories>
 
     <dependencies>
         <dependency>
@@ -88,13 +93,13 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.powermock.modules</groupId>
+            <groupId>org.powermock</groupId>
             <artifactId>powermock-module-junit4</artifactId>
             <version>${powermock.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.powermock.api</groupId>
+            <groupId>org.powermock</groupId>
             <artifactId>powermock-api-mockito</artifactId>
             <version>${powermock.version}</version>
             <scope>test</scope>
@@ -117,12 +122,6 @@
         </dependency>
     </dependencies>
 
-    <pluginRepositories>
-        <pluginRepository>
-            <id>repo.jenkins-ci.org</id>
-            <url>http://repo.jenkins-ci.org/public</url>
-        </pluginRepository>
-    </pluginRepositories>
     <build>
         <pluginManagement>
             <plugins>
@@ -215,12 +214,6 @@
             </extension>
         </extensions>
     </build>
-    <distributionManagement>
-        <repository>
-            <id>maven.jenkins-ci.org</id>
-            <url>http://maven.jenkins-ci.org:8081/content/repositories/releases</url>
-        </repository>
-    </distributionManagement>
     <scm>
         <connection>scm:git:ssh://github.com/jenkinsci/metadata-plugin.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/jenkinsci/metadata-plugin.git</developerConnection>
