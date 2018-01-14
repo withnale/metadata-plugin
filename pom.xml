@@ -69,7 +69,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <powermock.version>1.6.6</powermock.version>
+        <powermock.version>1.4.6</powermock.version>
     </properties>
 
 
